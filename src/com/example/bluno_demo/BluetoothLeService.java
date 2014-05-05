@@ -45,7 +45,7 @@ public class BluetoothLeService extends Service {
 
     private BluetoothManager mBluetoothManager;
     private BluetoothAdapter mBluetoothAdapter;
-    private BluetoothGatt mBluetoothGatt;
+    BluetoothGatt mBluetoothGatt;
     public String mBluetoothDeviceAddress;
     
     private static final int STATE_DISCONNECTED = 0;
@@ -116,7 +116,6 @@ public class BluetoothLeService extends Service {
                 mConnectionState = STATE_DISCONNECTED;
                 Log.i(TAG, "Disconnected from GATT server.");
                 broadcastUpdate(intentAction);
-                close();
             }
         }
 

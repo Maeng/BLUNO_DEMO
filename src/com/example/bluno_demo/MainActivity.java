@@ -93,6 +93,9 @@ public class MainActivity  extends BlunoLibrary {
 		case isScanning:
 			buttonScan.setText("Scanning");
 			break;
+		case isDisconnecting:
+			buttonScan.setText("isDisconnecting");
+			break;
 		default:
 			break;
 		}
